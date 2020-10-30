@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}SgDatatablesBundleDev{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/ju-1.12.1/dt-1.10.22/b-1.6.5/datatables.min.css"/>
+    {% endblock %}
+    {% block head_javascripts %}
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/b-1.6.5/datatables.min.js"></script>
+        <script src="{{ asset('bundles/sgdatatables/js/pipeline.js') }}"></script>
+
+        {#        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>#}
+        {#        <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>#}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div class="container">
+
+{% block main %}{% endblock %}
+</div>
+{% block javascripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="row justify-content-center">
+        <h3>Address Book Entry</h3>
+    </div>
+    <div class="row justify-content-center">
+        {% if picture is defined and picture %}
+            <img src="{{asset( picture  )}}" alt="picture" class="img-thumbnail">
+        {% endif %}
+        <div class="form_row">
+
+            {{ form_start(form) }}
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            // you may need to change this code if you are not using Bootstrap Datepicker
+            $('.js-datepicker').datepicker({
+                format: 'dd-mm-yyyy'
+            });
+        });
+    </script>
+{% endblock %}
